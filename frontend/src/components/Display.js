@@ -18,12 +18,12 @@ function Display({contract,account}) {
       alert(error);
     }
 
-    const isEmpty = Object.keys(DataArray).length==0;
+    const isEmpty = Object.keys(DataArray).length===0;
 
     if(!isEmpty){
       const images = DataArray.map((item,i) =>{
         return(
-          <a href={item} key={`a-${i}`} target="_blank">
+          <a href={item} key={`a-${i}`} target="_blank" rel="noopener noreferrer">
           <img 
           key={`img-${i}`}
           src={item}
